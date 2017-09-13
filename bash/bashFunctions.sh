@@ -59,3 +59,19 @@ function adjustBrightness () {
   sudo sh -c "echo $final > /sys/class/backlight/intel_backlight/brightness"
   return ${?}
 }
+
+
+function fixRazerMouseSpeed () {
+  id=`xinput list | egrep "Razer DeathAdder 2013" | head -1 | sed "s/id=/&#####/" | sed "s/.*#####//" | sed "s/\t/#####&/" | sed "s/#####.*$//"`
+
+  xinput --set-prop $id "Device Accel Constant Deceleration" 2
+  xinput --set-prop $id "Device Accel Velocity Scaling" 7
+}
+
+
+function startOpenVPN () {
+  command cd /etc/openvpn
+  sudo cp /home/sam/vpn/openVPN/mullvad_linux.conf /etc/openvpn/mullvad_linux.conf
+  sudo service openvpn start
+  command cd
+}
