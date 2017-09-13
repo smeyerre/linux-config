@@ -11,7 +11,6 @@ alias bc='bc -l'
 alias mkdir='mkdir -p -v'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias sagi='sudo apt-get install'
-alias androidsdk='cd /home/sam/android-studio/bin; ./studio.sh &'
 alias vim='vim -O'
 alias gs='git status'
 alias ga='git add'
@@ -23,4 +22,5 @@ alias gch='git checkout'
 alias gb='git branch'
 alias gd='git diff'
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
+alias vpnrestart='sudo service openvpn restart'
 
