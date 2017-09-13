@@ -1,0 +1,12 @@
+#!/bin/bash
+
+HERE=$(dirname "${BASH_SOURCE[0]}")
+
+sudo apt-get install i3
+sudo apt-get install tmux
+
+"$HERE"/i3/setup
+"$HERE"/i3status/setup
+"$HERE"/tmux/setup
+
+echo "All set up!"
