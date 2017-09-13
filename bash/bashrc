@@ -111,22 +111,11 @@ fi
 # fix colors for vim in terminator
 export TERM=screen-256color
 
-# for virtualenvwrapper
-source /home/sam/.local/bin/virtualenvwrapper.sh
-export PATH=~/.local/bin:$PATH
-
 # add /home/sam/bin/ to PATH
 export PATH=$PATH:/home/sam/bin/
 
-# Apache Ant variable
-export ANT_HOME=/home/sam/uwaterloo/cs349/apache-ant-1.10.1
-export PATH=$PATH:$ANT_HOME/bin
-
 # source scripts from ~/bin/
-# source ~/bin/lc so it doesn't have it's own directory
-. ~/bin/lc.sh
-. ~/bin/startobfsproxy.sh
-. ~/bin/stopobfsproxy.sh
+. ~/bin/bashFunctions.sh
 
 # custom bash prompt
 source ~/bash_prompt
