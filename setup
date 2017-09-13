@@ -12,3 +12,4 @@ sudo apt-get install tmux
 "$HERE"/tmux/setup
 
 echo "All set up!"
+echo "You may want to restart your computer"
