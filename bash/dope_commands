@@ -1,0 +1,28 @@
+# processes/ports/protocols
+lsof -i
+netstat -lptu
+netstat -tulpn
+netstat -nr
+netstat -a
+ifconfig
+ss -lntu
+traceroute
+
+# this one shows all strings in, say, a binary
+strings
+
+xinput list
+
+| less
+| more
+| xargs
+
+
+# mounting internal drive
+sudo fdisk -l # locate drive e.g. /dev/sdb1
+sudo mkdir /media/internalDriveName
+sudo mount /dev/sdb1 /media/internalDriveName
+
+# see list of all installed packages sorted by size
+dpkg-query -W --showformat='${Installed-Size} ${Package}\n' | sort -nr | less
+
