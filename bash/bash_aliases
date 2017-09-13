@@ -1,0 +1,29 @@
+alias uwlinenv='ssh -Y smeyerre@linux.student.cs.uwaterloo.ca'
+alias cp='cp -i -v'
+alias mv='mv -i -v'
+alias rm='rm -i'
+alias la='ls -a -h -l -F --group-directories-first --color=auto'
+alias ls='ls -F --format=single-column --group-directories-first --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias bc='bc -l'
+alias mkdir='mkdir -p -v'
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias sagi='sudo apt-get install'
+alias androidsdk='cd /home/sam/android-studio/bin; ./studio.sh &'
+alias vim='vim -O'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gf='git fetch'
+alias gp='git push'
+alias gr='git rebase'
+alias gch='git checkout'
+alias gb='git branch'
+alias gd='git diff'
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
+
+function scpuwlinenv () {
+  scp -r ${1} smeyerre@linux.student.cs.uwaterloo.ca:${2}
+}
