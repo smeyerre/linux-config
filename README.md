@@ -7,8 +7,8 @@ Automatically configures:
 
 ## To run setup:
 ```
-cd /path/to/linux-config
-./setup
+git clone git@github.com:Samwisemr/linux-config.git ~/linux-config
+~/linux-config/setup.sh
 ```
 
 ## TO DO
