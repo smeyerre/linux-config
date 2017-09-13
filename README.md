@@ -1,5 +1,15 @@
 # linux-config
-Automatically configures vim, bash files, i3, and tmux on new ubuntu computers
+Automatically configures:
+- vim
+- bash files
+- i3
+- tmux
 
-# TO DO
-manage differences between laptop/desktop configs
+## To run setup:
+```
+cd /path/to/linux-config
+./setup
+```
+
+## TO DO
+- manage differences between laptop/desktop configs
