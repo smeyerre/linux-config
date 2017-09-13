@@ -26,3 +26,7 @@ sudo mount /dev/sdb1 /media/internalDriveName
 # see list of all installed packages sorted by size
 dpkg-query -W --showformat='${Installed-Size} ${Package}\n' | sort -nr | less
 
+# disk usage
+lsblk
+sudo blkid
+
