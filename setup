@@ -2,6 +2,7 @@
 
 HERE=$(dirname "${BASH_SOURCE[0]}")
 
+sudo apt-get install vim-gnome
 sudo apt-get install i3
 sudo apt-get install tmux
 
