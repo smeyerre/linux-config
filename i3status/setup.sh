@@ -8,4 +8,5 @@ if [ -f ~/.config/i3status/config ]; then
 else
   command mkdir -p ~/.config/i3status
   command cp $HERE/config ~/.config/i3status/config
+  echo "i3status set up!"
 fi

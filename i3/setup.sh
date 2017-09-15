@@ -8,4 +8,5 @@ if [ -f ~/.config/i3/config ]; then
 else
   command mkdir -p ~/.config/i3
   command cp $HERE/config ~/.config/i3/config
+  echo "i3 set up!"
 fi
