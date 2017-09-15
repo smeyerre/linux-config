@@ -12,5 +12,6 @@ git clone git@github.com:Samwisemr/linux-config.git ~/linux-config
 ```
 
 ## TO DO
+- finish vim setup
 - manage differences between laptop/desktop configs
 - add pauses for user input (i.e. choosing between options)
