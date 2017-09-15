@@ -1,11 +1,18 @@
-# processes/ports/protocols
+# print running processes info
 lsof -i
+
+
+# show listening sockets only, proccesses running, tcp, udp
 netstat -lptu
-netstat -tulpn
+# show numbers for addresses/port numbers
+netstat -lptun
+# show routing tables
 netstat -nr
+# show all sockets
 netstat -a
-ifconfig
+# similar to above
 ss -lntu
+# trace path of packets to host
 traceroute
 
 # this one shows all strings in, say, a binary
@@ -25,8 +32,4 @@ sudo mount /dev/sdb1 /media/internalDriveName
 
 # see list of all installed packages sorted by size
 dpkg-query -W --showformat='${Installed-Size} ${Package}\n' | sort -nr | less
-
-# disk usage
-lsblk
-sudo blkid
 
