@@ -15,3 +15,4 @@ command mkdir -p ~/bin
 command cp $HERE/bashFunctions.sh ~/bin/bashFunctions.sh
 
 echo "Bash files set up!"
+echo "To add background image to i3, add the path to the image in ~/.fehbg"
