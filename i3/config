@@ -31,8 +31,8 @@ floating_modifier $mod
 
 
 exec --no-startup-id nm-applet
-exec --no-startup-id xautolock -time 10 -locker i3lock
-bindsym $mod+Delete exec --no-startup-id i3lock
+exec --no-startup-id xautolock -time 10 -locker i3lock --color=440000
+bindsym $mod+Delete exec --no-startup-id i3lock --color=440000
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
