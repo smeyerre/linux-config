@@ -5,6 +5,25 @@ function lc () {
 }
 
 
+function findstr () {
+  str=${1}
+  shift
+
+  filters="${1}"
+  shift
+  while [ "${1}" != "" ]; do
+    filters="$filters,${1}"
+    shift
+  done
+
+  if [ "$filters" = "" ]; then
+    find . -print0 | xargs -0 egrep -e "$str"
+  else
+    find . -name "*.[$filters]" -print0 | xargs -0 egrep -e "$str"
+  fi
+}
+
+
 function startobfsproxy () {
   command cd /etc/openvpn
   sudo service openvpn stop
