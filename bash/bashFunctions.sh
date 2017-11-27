@@ -50,7 +50,10 @@ function scpuwlinenv () {
 
 
 function adjustBrightness () {
-  if [ $1 = "full" ]; then
+  if [ "$1" -eq "$1" ]; then
+    sudo sh -c "echo $1 > /sys/class/backlight/intel_backlight/brightness"
+    return ${?}
+  elif [ $1 = "full" ]; then
     sudo sh -c "echo 425 > /sys/class/backlight/intel_backlight/brightness"
     return ${?}
   fi
