@@ -24,3 +24,4 @@ alias gd='git diff'
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
 alias vpnrestart='sudo service openvpn restart'
 alias vpnstop='sudo service openvpn stop'
+alias xo='xdg-open'
