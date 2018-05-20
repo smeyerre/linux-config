@@ -1,26 +1,34 @@
 #!/bin/bash
 
 function lc () {
-  cd "$@" && ls
+    cd "$@" && ls
 }
 
 
 function findstr () {
-  str=${1}
-  shift
+    str=${1}
+    if [ "$str" = "--help" -o "$str" = "" ]; then
+        command echo -e "Usage: findstr [--help] [ \e[4mSTRING\e[0m [\e[4mFILTER\e[0m]... ]\n"
+        command echo -e "Description:"
+        command echo -e "   Look for \e[4mSTRING\e[0m in files matching the \e[4mFILTER\e[0m types\n"
+        command echo -e "Options:"
+        command echo -e "   --help  display this help"
+    else
+        shift
 
-  filters="${1}"
-  shift
-  while [ "${1}" != "" ]; do
-    filters="$filters,${1}"
-    shift
-  done
+        filters="${1}"
+        shift
+        while [ "${1}" != "" ]; do
+            filters="$filters,${1}"
+            shift
+        done
 
-  if [ "$filters" = "" ]; then
-    find . -print0 | xargs -0 egrep -e "$str"
-  else
-    find . -name "*.[$filters]" -print0 | xargs -0 egrep -e "$str"
-  fi
+        if [ "$filters" = "" ]; then
+            find . -print0 | xargs -0 egrep -e "$str"
+        else
+            find . -name "*.[$filters]" -print0 | xargs -0 egrep -e "$str"
+        fi
+    fi
 }
 
 
