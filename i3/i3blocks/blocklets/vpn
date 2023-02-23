@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if mullvad_status=$(mullvad status); then
+	if echo "$mullvad_status" | grep -q Connected; then
+		location=$(echo "$mullvad_status" | awk -F 'in' '{print $2}' | xargs)
+    output="  $location"
+		color="#CF9A08"
+	else
+    output="  Disconnected"
+		color="#A5351D"
+	fi
+else
+  echo "ERR"
+fi
+
+echo "{\"full_text\":\"${output}\", \"color\":\"${color}\"}"
