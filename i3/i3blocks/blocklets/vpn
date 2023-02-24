@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mullvad_notify="notify-send -i ~/.config/i3/blocklets/img/mullvad.png -h string:x-canonical-private-synchronous:i3bvpn"
+
 # If block is clicked
 case $BLOCK_BUTTON in
 1) # Left Click
@@ -17,22 +19,21 @@ case $BLOCK_BUTTON in
     -mesg "Mullvad VPN"`
   case $option in
      Connect)
-	       #	$mullvad_notify "Connecting to mullvad"
+	       $mullvad_notify "Connecting to Mullvad"
 	       mullvad connect
-	       #	while mullvad status | grep -q 'Connecting\|Disconn'; do
-	       #		sleep 1
-	       #	done
-	       #	$mullvad_notify "$(mullvad status)"
-	       #	$mullvad_notify "$(mullvad status -l)"
+	       while mullvad status | grep -q 'Connecting\|Disconn'; do
+	       	sleep 1
+	       done
+	       $mullvad_notify "$(mullvad status -l)"
          ;;
      Disconnect)
-	       #	$mullvad_notify "Disconnecting from mullvad"
+	       $mullvad_notify "Disconnecting from Mullvad"
 	       mullvad disconnect
-	       #	while mullvad status | grep -q Disconnecting; do
-	       #		sleep 1
-	       #	done
-	       #	sleep 1
-	       #	$mullvad_notify "$(mullvad status -l)"
+	       while mullvad status | grep -q 'Disconnecting'; do
+	       	sleep 1
+	       done
+	       sleep 1
+	       $mullvad_notify "$(mullvad status -l)"
          ;;
   esac
 	;;
