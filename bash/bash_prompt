@@ -70,7 +70,8 @@ function set_prompt() {
     fi
 
     # Dollar/pound sign
-    end="\n${LC}\$${NIL} "
+    #end="\n${LC}\$${NIL} "
+    end="${LC}\$${NIL} "
 
     # Time (useful when catting logs)
     time="[${GREEN}$(date +"%R")${NIL}]"

@@ -8,11 +8,7 @@ command cp $HERE/bash_aliases ~/.bash_aliases
 command cp $HERE/profile ~/.profile
 command cp $HERE/dope_commands ~/dope_commands
 
-command cp $HERE/fehbg ~/.fehbg
-command chmod a+x ~/.fehbg
-
 command mkdir -p ~/bin
 command cp $HERE/bashFunctions.sh ~/bin/bashFunctions.sh
 
 echo "Bash files set up!"
-echo "To add background image to i3, add the path to the image in ~/.fehbg"

@@ -108,11 +108,11 @@ fi
 
 # Custom stuff below
 
-# fix colors for vim in terminator
-export TERM=screen-256color
-
 # add /home/sam/bin/ to PATH
 export PATH=$PATH:/home/sam/bin/
+
+# add /home/sam/.local/bin to path
+export PATH="/home/sam/.local/bin:$PATH"
 
 # source scripts from ~/bin/
 . ~/bin/bashFunctions.sh
