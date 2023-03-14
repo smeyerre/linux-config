@@ -45,6 +45,7 @@ supergfxctl
 sysstat
 terminus-font
 tldr
+tree
 ttf-dejavu
 ttf-font-awesome
 ttf-ionicons
