@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "Running setup script. Assuming you are in a bash shell."
+echo "Press [Enter] to continue with configuration..."
+while true; do
+  read -s -n 1 input
+  if [[ $input = '' ]]; then break; fi
+done
+
 HERE=$(dirname "${BASH_SOURCE[0]}")
 
 # Install Asus ROG Zephyrus tools
