@@ -19,7 +19,6 @@ Automatically configures:
      ssh-keygen -t ed25519 -C "your_email@example.com"
      eval "$(ssh-agent -s)"
      ssh-add ~/.ssh/id_ed25519
-
      ```
     - Add your public key to your GitHub account
  - Clone the repo and run the script!
