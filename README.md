@@ -1,7 +1,7 @@
 # linux-config
 
-Sets up new computer after a Arch linux (installation)[https://wiki.archlinux.org/title/Installation_guide].
-Look at the (migration guide)[https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware] for more information.
+Sets up new computer after an Arch linux installation.
+Look at the [migration guide](https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware) for more information.
 
 Automatically configures:
 - pacman packages
@@ -11,7 +11,7 @@ Automatically configures:
 - vim (optional)
 
 ## To run setup:
- - Follow the Arch (installation guide)[https://wiki.archlinux.org/title/Installation_guide] till the end but do not reboot
+ - Follow the Arch [installation guide](https://wiki.archlinux.org/title/Installation_guide) till the end but do not reboot
  - Ensure you are signed in as your user account
  - Set up git:
      ```
