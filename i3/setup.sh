@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Setting up i3..."
+
 HERE=$(dirname "${BASH_SOURCE[0]}")
 
 command cp $HERE/config ~/.config/i3/config
