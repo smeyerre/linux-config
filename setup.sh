@@ -1,6 +1,8 @@
 #!/bin/bash
 
+echo "For help read https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware"
 echo "Running setup script. Assuming you are in a bash shell."
+echo "You should have already installed Arch fully without rebooting. For help read https://wiki.archlinux.org/title/Installation_guide"
 echo "Press [Enter] to continue with configuration..."
 while true; do
   read -s -n 1 input
