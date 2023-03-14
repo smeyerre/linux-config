@@ -4,6 +4,25 @@ function lc () {
     cd "$@" && ls
 }
 
+function pkgBackup() {
+  echo "Backing up community and Aur packages..."
+  command cd ~/github/linux-config
+  pacman -Qqen > pkglistNative.txt
+  echo "Backed up native packages to pkglistNative.txt..."
+  pacman -Qqem > pkglistAur.txt
+  echo "Backed up Aur packages to pkglistAur.txt..."
+  if [[ $(command git diff-index --quiet HEAD) == 0 ]]; then
+    command git add ./
+    command git commit -m "Packages backup - $(date +"%Y-%m-%d %T")"
+    command git push
+    echo "Created backup - $(date +"%Y-%m-%d %T")"
+  else
+    echo "Nothing new to backup..."
+  fi
+  command cd -
+  echo "Done!"
+}
+
 function fixRazerMouseSpeed () {
   xinput --set-prop "pointer:Razer Razer DeathAdder 2013" "libinput Accel Speed" -0.4
 }
