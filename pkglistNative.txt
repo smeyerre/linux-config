@@ -28,6 +28,7 @@ neofetch
 network-manager-applet
 networkmanager
 noto-fonts
+obsidian
 os-prober
 otf-latin-modern
 pacman-contrib
@@ -53,6 +54,7 @@ ttf-liberation
 ttf-nerd-fonts-symbols-2048-em-mono
 ttf-roboto
 ttf-ubuntu-font-family
+unzip
 vim
 xdg-user-dirs
 xdg-utils
