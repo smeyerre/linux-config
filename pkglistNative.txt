@@ -28,6 +28,7 @@ man-db
 neofetch
 network-manager-applet
 networkmanager
+nftables
 noto-fonts
 obsidian
 os-prober
