@@ -6,6 +6,7 @@ bash-completion
 blueman
 bluez-utils
 brightnessctl
+cpupower
 discord
 dunst
 efibootmgr
