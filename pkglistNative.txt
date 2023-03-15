@@ -8,6 +8,7 @@ blueman
 bluez-utils
 brightnessctl
 cpupower
+deluge
 discord
 dunst
 efibootmgr
