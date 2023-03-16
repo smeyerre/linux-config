@@ -7,7 +7,7 @@ while true; do
   if [[ $input = '' ]]; then break; fi
 done
 
-git clone git@github.com:Samwisemr/vimrc.git ~/.vim-runtime
+git clone git@github.com:smeyerre/vimrc.git ~/.vim-runtime
 sh ~/.vim-runtime/install_awesome_vimrc.sh
 
 echo "vim set up!"
