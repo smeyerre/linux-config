@@ -7,8 +7,8 @@ echo "Backing up community and Aur packages..."
 command cd ~/github/linux-config
 
 echo "${bold}Retrieving native packages...${normal}"
-newpkgsNative=$(pacman -Qqen | comm -13 pkglistNative.txt -)
-removedpkgsNative=$(pacman -Qqen | comm -23 pkglistNative.txt -)
+newpkgsNative=$(comm -13 <(sort pkglistNative.txt) <(pacman -Qqen | sort))
+removedpkgsNative=$(comm -23 <(sort pkglistNative.txt) <(pacman -Qqen | sort))
 
 if [[ -z "$newpkgsNative" ]]; then newpkgsNative="N/A"; fi
 if [[ -z "$removedpkgsNative" ]]; then removedpkgsNative="N/A"; fi
@@ -19,8 +19,8 @@ echo "  Removed native packages..."
 echo "$(echo $removedpkgsNative | sed 's/^/    /')"
 
 echo "${bold}Retrieving Aur packages...${normal}"
-newpkgsAur=$(pacman -Qqem | comm -13 pkglistAur.txt -)
-removedpkgsAur=$(pacman -Qqem | comm -23 pkglistAur.txt -)
+newpkgsAur=$(comm -13 <(sort pkglistAur.txt) <(pacman -Qqem | sort))
+removedpkgsAur=$(comm -23 <(sort pkglistAur.txt) <(pacman -Qqem | sort))
 
 if [[ -z "$newpkgsAur" ]]; then newpkgsAur="N/A"; fi
 if [[ -z "$removedpkgsAur" ]]; then removedpkgsAur="N/A"; fi
