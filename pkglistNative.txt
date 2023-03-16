@@ -67,6 +67,7 @@ ttf-roboto
 ttf-ubuntu-font-family
 unzip
 vlc
+wireshark-cli
 xdg-user-dirs
 xdg-utils
 xf86-video-vesa
