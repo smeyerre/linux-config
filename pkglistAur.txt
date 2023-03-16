@@ -2,4 +2,5 @@
 betterlockscreen
 mictray
 mullvad-vpn
+vim-youcompleteme-git
 yay
