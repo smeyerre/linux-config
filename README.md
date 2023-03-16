@@ -27,3 +27,6 @@ Automatically configures:
     cd ~/linux-config
     ./setup.sh
     ```
+
+# TODO
+ - Change some absolute path home directory references to "~"
