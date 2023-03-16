@@ -7,6 +7,7 @@ bash-completion
 blueman
 bluez-utils
 brightnessctl
+code
 cpupower
 deluge
 discord
@@ -19,6 +20,7 @@ gnu-free-fonts
 go
 grub
 gtk4
+gvim
 i3-wm
 i3blocks
 inetutils
@@ -59,7 +61,6 @@ ttf-nerd-fonts-symbols-2048-em-mono
 ttf-roboto
 ttf-ubuntu-font-family
 unzip
-vim
 xdg-user-dirs
 xdg-utils
 xf86-video-vesa
