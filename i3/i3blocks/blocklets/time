@@ -1,10 +1,4 @@
 #!/bin/bash
 #date_time=$(date '+%a %d-%m-%Y %R:%S')
-date_time=$(date '+%a %d-%m-%Y %R')
+date_time=$(date '+%a %d-%m-%Y<big> %R</big>')
 echo "$date_time"
-
-#Buttons Control
-case "$BLOCK_BUTTON" in
-    1) exec zenity --calendar
-        ;;
-esac

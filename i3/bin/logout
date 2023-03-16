@@ -1,22 +1,25 @@
 #!/usr/bin/env bash
 # Manage logout with rofi
+#
+#
+# NOTE: Might cause issues without sudo/polkit if another user is logged in for example
+
 option=`echo -e "lock screen\nlogout\nsuspend\nreboot\npoweroff\nKill user $USER" | rofi -width 600 -dmenu -p system:`
 case $option in
     'lock screen')
-        i3lock -i /home/sam/Pictures/lockscreen.png
+        betterlockscreen --lock blur
         ;;
     logout)
         i3-nagbar -t warning -m 'Are you sure you  want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'
         ;;
     suspend)
-        i3lock -i /home/sam/Pictures/lockscreen.png
-        sudo  /usr/bin/systemctl suspend
+        /usr/bin/systemctl suspend
         ;;
     reboot)
-        sudo /usr/bin/systemctl reboot
+        /usr/bin/systemctl reboot
         ;;
     poweroff)
-        sudo /usr/bin/systemctl poweroff
+        /usr/bin/systemctl poweroff
         ;;
     'kill user $USER')
         loginctl kill-user $USER
