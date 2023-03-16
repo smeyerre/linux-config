@@ -9,6 +9,6 @@ command cp $HERE/profile ~/.profile
 command cp $HERE/dope_commands ~/dope_commands
 
 command mkdir -p ~/bin
-command cp $HERE/bashFunctions.sh ~/bin/bashFunctions.sh
+command cp $HERE/bin/* ~/bin/
 
 echo "Bash files set up!"

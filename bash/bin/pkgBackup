@@ -1,0 +1,48 @@
+#!/bin/bash
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+echo "Backing up community and Aur packages..."
+command cd ~/github/linux-config
+
+echo "${bold}Retrieving native packages...${normal}"
+newpkgsNative=$(pacman -Qqen | comm -13 pkglistNative.txt -)
+removedpkgsNative=$(pacman -Qqen | comm -23 pkglistNative.txt -)
+
+if [[ -z "$newpkgsNative" ]]; then newpkgsNative="N/A"; fi
+if [[ -z "$removedpkgsNative" ]]; then removedpkgsNative="N/A"; fi
+
+echo "  New native packages..."
+echo "$(echo $newpkgsNative | sed 's/^/    /')"
+echo "  Removed native packages..."
+echo "$(echo $removedpkgsNative | sed 's/^/    /')"
+
+echo "${bold}Retrieving Aur packages...${normal}"
+newpkgsAur=$(pacman -Qqem | comm -13 pkglistAur.txt -)
+removedpkgsAur=$(pacman -Qqem | comm -23 pkglistAur.txt -)
+
+if [[ -z "$newpkgsAur" ]]; then newpkgsAur="N/A"; fi
+if [[ -z "$removedpkgsAur" ]]; then removedpkgsAur="N/A"; fi
+
+echo "  New Aur packages..."
+echo "$(echo $newpkgsAur | sed 's/^/    /')"
+echo "  Removed Aur packages..."
+echo "$(echo "$removedpkgsAur" | sed 's/^/    /')"
+
+echo "${bold}Writing native packages to pkglistNative.txt...${normal}"
+pacman -Qqen > pkglistNative.txt
+echo "${bold}Writing Aur packages to pkglistAur.txt...${normal}"
+pacman -Qqem > pkglistAur.txt
+
+if [[ `git status --porcelain pkglist*.txt` ]]; then
+  command git add ./
+  command git commit -m "Packages backup - $(date +"%Y-%m-%d %T")"
+  command git push
+  echo "${bold}Created backup - $(date +"%Y-%m-%d %T")${normal}"
+else
+  echo "${bold}Did not backup.${normal}"
+fi
+
+command cd -
+echo "Done!"
