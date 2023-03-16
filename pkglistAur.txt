@@ -2,5 +2,6 @@
 betterlockscreen
 mictray
 mullvad-vpn
+thesauromatic-git
 vim-youcompleteme-git
 yay

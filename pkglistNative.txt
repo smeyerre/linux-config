@@ -36,6 +36,7 @@ neofetch
 network-manager-applet
 networkmanager
 nftables
+nmap
 noto-fonts
 obsidian
 os-prober
