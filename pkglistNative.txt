@@ -50,6 +50,7 @@ pulseaudio-lirc
 pulseaudio-zeroconf
 rofi
 rog-control-center
+sdcv
 sudo
 supergfxctl
 sysstat

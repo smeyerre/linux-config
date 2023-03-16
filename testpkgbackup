@@ -1,0 +1,7 @@
+#!/bin/bash
+
+newpkgsNative=$(comm -13 <(sort pkglistNative.txt) <(pacman -Qqen | sort))
+removedpkgsNative=$(comm -23 <(sort pkglistNative.txt) <(pacman -Qqen | sort))
+
+echo "$newpkgsNative"
+echo "$removedpkgsNative"
