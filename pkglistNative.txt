@@ -16,6 +16,7 @@ dunst
 efibootmgr
 feh
 firefox
+flameshot
 git
 gnu-free-fonts
 go
