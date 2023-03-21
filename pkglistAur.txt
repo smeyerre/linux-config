@@ -3,5 +3,7 @@ betterlockscreen
 mictray
 mullvad-vpn
 thesauromatic-git
+timeshift
+timeshift-autosnap
 vim-youcompleteme-git
 yay

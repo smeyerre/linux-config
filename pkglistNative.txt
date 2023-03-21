@@ -1,3 +1,4 @@
+acpi
 asp
 asusctl
 aws-cli
@@ -10,6 +11,7 @@ brightnessctl
 clang
 code
 cpupower
+cronie
 deluge
 discord
 dunst
@@ -22,6 +24,7 @@ gnu-free-fonts
 go
 grub
 gtk4
+gvfs
 gvim
 hugo
 i3-wm
@@ -31,6 +34,7 @@ iw
 kitty
 linux
 linux-firmware
+logrotate
 man-db
 neofetch
 network-manager-applet
@@ -38,10 +42,14 @@ networkmanager
 nftables
 nmap
 noto-fonts
+nvidia
+nvidia-prime
+nvidia-settings
 obsidian
 os-prober
 otf-latin-modern
 pacman-contrib
+powertop
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -49,13 +57,18 @@ pulseaudio-equalizer
 pulseaudio-jack
 pulseaudio-lirc
 pulseaudio-zeroconf
+rclone
+reflector
 rofi
 rog-control-center
 sdcv
+smem
 sudo
 supergfxctl
+syncthing
 sysstat
 terminus-font
+thunar
 tldr
 tree
 ttf-dejavu
@@ -65,8 +78,10 @@ ttf-liberation
 ttf-nerd-fonts-symbols-2048-em-mono
 ttf-roboto
 ttf-ubuntu-font-family
+turbostat
 unzip
 vlc
+w3m
 wireshark-cli
 xdg-user-dirs
 xdg-utils
