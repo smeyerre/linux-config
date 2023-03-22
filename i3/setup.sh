@@ -15,7 +15,6 @@ command mkdir -p ~/.config/betterlockscreen/
 command cp /usr/share/doc/betterlockscreen/examples/betterlockscreenrc ~/.config/betterlockscreen/
 systemctl enable betterlockscreen@$USER
 
-
 # Setup Rofi
 while true; do
   read -p "Would you like to import the rofi configuration? [Y/n]: " yn
@@ -25,6 +24,20 @@ while true; do
       break;;
     [Nn]* )
       echo "Skipping rofi config import.";
+      break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+# Setup Picom
+while true; do
+  read -p "Would you like to import the picom configuration? [Y/n]: " yn
+  case $yn in
+    "[Yy]*"|"" )
+      command cp -r $HERE/picom ~/.config/
+      break;;
+    [Nn]* )
+      echo "Skipping picom config import.";
       break;;
     * ) echo "Please answer yes or no.";;
   esac

@@ -210,8 +210,9 @@ set $m2 #FFF0E0
 # Startup programs
 exec --no-startup-id /usr/bin/dunst &
 exec --no-startup-id /usr/bin/mictray &
-exec_always --no-startup-id picom &;
-exec --no-startup-id clipit &;
+# picom may need adjusting for lag
+exec_always --no-startup-id picom &
+exec --no-startup-id clipit &
 exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id blueman-applet &
 exec_always --no-startup-id betterlockscreen --update ~/Pictures/wallpaper.jpg &
