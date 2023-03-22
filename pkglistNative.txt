@@ -32,6 +32,7 @@ i3blocks
 inetutils
 iw
 kitty
+libva-utils
 linux
 linux-firmware
 logrotate
@@ -49,6 +50,8 @@ obsidian
 os-prober
 otf-latin-modern
 pacman-contrib
+papirus-icon-theme
+picom
 powertop
 pulseaudio
 pulseaudio-alsa
@@ -63,6 +66,7 @@ rofi
 rog-control-center
 sdcv
 smem
+steam
 sudo
 supergfxctl
 syncthing
