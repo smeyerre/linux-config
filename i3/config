@@ -26,13 +26,9 @@ set $mod1 Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 12
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-
-font pango:DejaVu Sans Mono 12
-#font pango:Meslo LG L Regular Nerd Font Complete 15
+# font pango:monospace 12
+# font pango:DejaVu Sans Mono 12
+font pango:Meslo LG L Regular Nerd Font Complete 13
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -191,7 +187,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 4%- && notify-send --expire
 bar {
     status_command i3blocks
     position top
-    font pango:Hack, FontAwesome 11
+    font pango:Hack, FontAwesome 12
 
     colors {
         separator #081419
@@ -214,12 +210,14 @@ set $m2 #FFF0E0
 # Startup programs
 exec --no-startup-id /usr/bin/dunst &
 exec --no-startup-id /usr/bin/mictray &
-exec_always compton &;
+exec_always --no-startup-id picom &;
 exec --no-startup-id clipit &;
 exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id blueman-applet &
 exec_always --no-startup-id betterlockscreen --update ~/Pictures/wallpaper.jpg &
 exec_always --no-startup-id betterlockscreen --wall &
+# exec --no-startup-id rclone mount --vfs-cache-mode full googleDrive: ~/googleDriveRemote/ &
+# exec_always --no-startup-id systemctl start syncthing@sam.service # may need to uncomment to start on startup
 
 # # Bind App to workspace
 # # Check class by using xprop command
@@ -242,26 +240,26 @@ exec_always --no-startup-id betterlockscreen --wall &
 # # Assign to certain workspace
 # assign [window_role="browser"] $ws2
 
-# Press $mod+o followed by either f, s, l, m, v, k, d, t, Esc or Return {ENTER),
-# to launch FoxiReader, Skype, lxappearance, thunderbird, VirtualBox,
-# KVM Virt-manager, spectacle, pcmanfm file manager,
-# or return to the default mode, respectively.
-set $mode_launcher Launcher
-bindsym $mod+o mode "$mode_launcher"
+# # Press $mod+o followed by either f, s, l, m, v, k, d, t, Esc or Return {ENTER),
+# # to launch FoxiReader, Skype, lxappearance, thunderbird, VirtualBox,
+# # KVM Virt-manager, spectacle, pcmanfm file manager,
+# # or return to the default mode, respectively.
+# set $mode_launcher Launcher
+# bindsym $mod+o mode "$mode_launcher"
 
-mode "$mode_launcher" {
-#    bindsym f exec FoxitReader
-#    bindsym s exec skypeforlinux
-#    bindsym l exec lxappearance
-#    bindsym m exec thunderbird
-#    bindsym v exec VirtualBox
-#    bindsym k exec virt-manager
-#    bindsym d exec spectacle
-#    bindsym t exec "pcmanfm /home/sam"
+# mode "$mode_launcher" {
+# #    bindsym f exec FoxitReader
+# #    bindsym s exec skypeforlinux
+# #    bindsym l exec lxappearance
+# #    bindsym m exec thunderbird
+# #    bindsym v exec VirtualBox
+# #    bindsym k exec virt-manager
+# #    bindsym d exec spectacle
+# #    bindsym t exec "pcmanfm /home/sam"
 
-    bindsym Esc mode "default"
-    bindsym Return mode "default"
-}
+#     bindsym Esc mode "default"
+#     bindsym Return mode "default"
+# }
 
 # Shutdown, Reboot, Lock Screen, and Logout
 
