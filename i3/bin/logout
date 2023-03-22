@@ -4,7 +4,7 @@
 #
 # NOTE: Might cause issues without sudo/polkit if another user is logged in for example
 
-option=`echo -e "lock screen\nlogout\nsuspend\nreboot\npoweroff\nKill user $USER" | rofi -theme 'fullscreen' -theme-str 'window {padding: 525 1000;}' -dmenu -p system:`
+option=`echo -e "lock screen\nlogout\nsuspend\nreboot\npoweroff\nKill user $USER" | rofi -theme 'fullscreen' -theme-str 'window {padding: 498 1000;}' -dmenu -p system:`
 case $option in
     'lock screen')
         betterlockscreen --lock blur
