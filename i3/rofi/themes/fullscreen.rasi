@@ -25,11 +25,11 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #282C347F;
-	fg: #ABB2BF7F;
-	blue: #61AFEF7F;
+  bg: #282C349C;
+	fg: #ABB2BF;
+	blue: #61AFEF;
 	blue-alt: #61AFEF15;
-	red: #E06C757F;
+	red: #E06C75;
   red-alt: #E06C7515;
 
   background-color: @bg;
@@ -64,7 +64,7 @@ entry {
 }
 
 listview {
-  lines: 5;
+  lines: 6;
 }
 
 element {

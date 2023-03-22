@@ -2,7 +2,7 @@
 # Run rofi app launcher
 i3-dmenu-desktop --dmenu=" \
   rofi \
-    -theme 'appLauncher' \
+    -theme 'fullscreen' \
     -dmenu -i -p 'apps'"
 
     # -eh 2 \
