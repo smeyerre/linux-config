@@ -1,7 +1,7 @@
 acpi
 asp
 asusctl
-aws-cli
+aws-cli-v2
 base
 base-devel
 bash-completion
@@ -53,6 +53,7 @@ pacman-contrib
 papirus-icon-theme
 picom
 powertop
+ps_mem
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
