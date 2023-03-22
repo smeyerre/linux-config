@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 # Run rofi app launcher
-i3-dmenu-desktop --dmenu="rofi -dmenu -i -p 'apps'"
+i3-dmenu-desktop --dmenu=" \
+  rofi \
+    -theme 'appLauncher' \
+    -dmenu -i -p 'apps'"
+
+    # -eh 2 \
+    # -theme-str 'listview {lines: 5;}' \
