@@ -5,6 +5,7 @@ aws-cli-v2
 base
 base-devel
 bash-completion
+bind
 blueman
 bluez-utils
 brightnessctl
@@ -32,12 +33,14 @@ i3blocks
 inetutils
 iw
 kitty
+libva-mesa-driver
 libva-utils
 linux
 linux-firmware
 logrotate
 man-db
 neofetch
+neovim
 network-manager-applet
 networkmanager
 nftables
@@ -61,6 +64,8 @@ pulseaudio-equalizer
 pulseaudio-jack
 pulseaudio-lirc
 pulseaudio-zeroconf
+python-pynvim
+radeontop
 rclone
 reflector
 rofi
@@ -85,9 +90,11 @@ ttf-roboto
 ttf-ubuntu-font-family
 turbostat
 unzip
+vdpauinfo
 vlc
 w3m
 wireshark-cli
+xclip
 xdg-user-dirs
 xdg-utils
 xf86-video-vesa
@@ -139,3 +146,4 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xsel

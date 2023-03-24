@@ -2,6 +2,7 @@
 betterlockscreen
 mictray
 mullvad-vpn
+nvim-packer-git
 thesauromatic-git
 timeshift
 timeshift-autosnap
