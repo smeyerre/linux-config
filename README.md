@@ -29,6 +29,4 @@ Automatically configures:
     ```
 
 # TODO
- - Change some absolute path home directory references to "~"
  - Setup remaining config files eg. `/etc/`, `/usr/`, ...
- - Update vim setup to neovim

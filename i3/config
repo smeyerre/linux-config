@@ -38,10 +38,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # Custom bindsyms
 bindsym $mod+p exec ~/.config/i3/bin/logout
-bindsym $mod+Delete exec i3lock -i /home/sam/Pictures/windows-xp-bliss-4k-lu-2560x1440.jpg
+bindsym $mod+Delete exec i3lock -i ~/Pictures/windows-xp-bliss-4k-lu-2560x1440.jpg
 bindsym $mod+b exec firefox
 bindsym $mod+r mode "resize"
-bindsym $mod+Shift+f exec /home/sam/.config/i3/bin/rofifinder
+bindsym $mod+Shift+f exec ~/.config/i3/bin/rofifinder
 
 # Enable Print Screen
 #bindsym --release $mod+Print exec gnome-screenshot -i
@@ -256,7 +256,7 @@ exec_always --no-startup-id betterlockscreen --wall &
 # #    bindsym v exec VirtualBox
 # #    bindsym k exec virt-manager
 # #    bindsym d exec spectacle
-# #    bindsym t exec "pcmanfm /home/sam"
+# #    bindsym t exec "pcmanfm ~/sam"
 
 #     bindsym Esc mode "default"
 #     bindsym Return mode "default"
@@ -269,7 +269,7 @@ exec_always --no-startup-id betterlockscreen --wall &
 # mode $power_mode {
 #     bindsym p         exec systemctl poweroff
 #     bindsym r         exec systemctl reboot
-#     bindsym l         exec i3lock -i /home/sam/Pictures/windows-xp-bliss-4k-lu-2560x1440.jpg, mode "default"
+#     bindsym l         exec i3lock -i ~/Pictures/windows-xp-bliss-4k-lu-2560x1440.jpg, mode "default"
 #     bindsym q         exec --no-startup-id i3-msg exit, mode "default"
 #     bindsym h         exec sudo systemctl hibernate
 #     bindsym s         exec sudo systemctl suspend

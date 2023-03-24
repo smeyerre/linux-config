@@ -36,11 +36,11 @@ fi
 
 PS1='[\u@\h \W]\$ '
 
-# add /home/sam/bin/ to PATH
-export PATH=$PATH:/home/sam/bin/
+# add ~/bin/ to PATH
+export PATH=$PATH:~/bin/
 
-# add /home/sam/.local/bin to path
-export PATH=$PATH:/home/sam/.local/bin/
+# add ~/.local/bin to path
+export PATH=$PATH:~/.local/bin/
 
 # source scripts from ~/bin/
 source ~/bin/bashFunctions.sh
