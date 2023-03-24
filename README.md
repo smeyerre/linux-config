@@ -3,6 +3,8 @@
 Sets up new computer after an Arch linux installation.
 Look at the [migration guide](https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware) for more information.
 
+See [ubuntu](https://github.com/smeyerre/linux-config/tree/ubuntu) branch for the Ubuntu setup.
+
 Automatically configures:
 - pacman packages
 - Aur packages
