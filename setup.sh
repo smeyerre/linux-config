@@ -90,16 +90,22 @@ echo
 
 # Setup vim
 # ===========================================
-while true; do
-  read -p "Would you like to configure vim dotfiles from github.com:Samwisemr/vimrc.git? [Y/n]: " yn
+echo "Optional Vim setup:"
+echo "Would you like to configure..."
+echo " => NeoVim dotfiles and packages from git@github.com:smeyerre/vim-config.git (Recommended)"
+echo " => Old Vim dotfiles from github.com:Samwisemr/vimrc.git"
+echo " => Skip Vim setup"
+select yn in "NeoVim" "Vim" "Skip"; do
   case $yn in
-    "[Yy]*"|"" )
-      "$HERE"/vim/setup.sh
+    NeoVim )
+      "$HERE"/vim/neoVimSetup.sh;
       break;;
-    [Nn]* )
+    Vim )
+      "$HERE"/vim/vimSetup.sh;
+      break;;
+    Skip )
       echo "Skipping vim setup.";
       break;;
-    * ) echo "Please answer yes or no.";;
   esac
 done
 
