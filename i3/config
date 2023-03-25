@@ -33,6 +33,12 @@ font pango:Meslo LG L Regular Nerd Font Complete 13
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# hide edge borders 
+hide_edge_borders smart_no_gaps
+
+# Activate smart borders (only when there are effectively no gaps)
+smart_borders on
+
 # start a terminator by pressing Mod key + x or ENTER
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -190,19 +196,28 @@ bar {
     font pango:Hack, FontAwesome 12
 
     colors {
-        separator #081419
-        background #253941
-        #statusline #839496
-        focused_workspace #fdf6e3 #6c71c4 #fdf6e3
-        active_workspace #fdf6e3 #6c71c4 #fdf6e3
-        inactive_workspace #002b36 #586e75 #002b36
-        urgent_workspace #d33682 #d33682 #fdf6e3
+      background #282A36
+        statusline #F8F8F2
+        separator  #44475A
 
-        statusline         $white
-        separator          $transparent
-  }
+        focused_workspace  #44475A #44475A #F8F8F2
+        active_workspace   #282A36 #44475A #F8F8F2
+        inactive_workspace #282A36 #282A36 #BFBFBF
+        urgent_workspace   #FF5555 #FF5555 #F8F8F2
+        binding_mode       #FF5555 #FF5555 #F8F8F2
+    }
 }
 
+# Color scheme
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+# client.background       #F8F8F2
+client.background       #F8F8F2
 
 set $m1 #808080
 set $m2 #FFF0E0
@@ -211,7 +226,8 @@ set $m2 #FFF0E0
 exec --no-startup-id /usr/bin/dunst &
 exec --no-startup-id /usr/bin/mictray &
 # picom may need adjusting for lag
-exec_always --no-startup-id picom &
+# prime-run utilises dGPU
+exec_always --no-startup-id prime-run picom --legacy-backends &
 exec --no-startup-id clipit &
 exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id blueman-applet &
