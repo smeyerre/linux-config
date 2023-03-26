@@ -21,6 +21,7 @@ feh
 firefox
 flameshot
 git
+gnome-themes-extra
 gnu-free-fonts
 go
 grub
@@ -45,6 +46,7 @@ network-manager-applet
 networkmanager
 nftables
 nmap
+nodejs
 noto-fonts
 nvidia
 nvidia-prime
@@ -147,3 +149,4 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xsel
+yarn
