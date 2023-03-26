@@ -31,4 +31,5 @@ Automatically configures:
     ```
 
 # TODO
- - Setup remaining config files eg. `/etc/`, `/usr/`, ...
+ - Setup remaining config files eg. `~/.config/`, `/etc/`, `/usr/`, ...
+ - Maybe migrate to Wayland

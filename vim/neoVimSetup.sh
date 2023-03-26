@@ -9,3 +9,5 @@ done
 git clone git@github.com:smeyerre/vim-config.git ~/.vim-config
 sh ~/.vim-config/setup.sh
 
+echo "Neovim set up!"
+
