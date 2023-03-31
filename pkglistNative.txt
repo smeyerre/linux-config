@@ -22,6 +22,7 @@ feh
 firefox
 flameshot
 git
+glow
 gnome-themes-extra
 gnu-free-fonts
 go
@@ -83,6 +84,7 @@ supergfxctl
 syncthing
 sysstat
 terminus-font
+the_silver_searcher
 thunar
 tldr
 tree

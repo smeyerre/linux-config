@@ -6,5 +6,4 @@ nvim-packer-git
 thesauromatic-git
 timeshift
 timeshift-autosnap
-vim-youcompleteme-git
 yay
