@@ -1,5 +1,6 @@
 1password
 betterlockscreen
+fromscratch-bin
 mictray
 mullvad-vpn
 nvim-packer-git

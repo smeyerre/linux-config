@@ -15,17 +15,20 @@ code
 cpupower
 cronie
 deluge
+deluge-gtk
 discord
 dunst
 efibootmgr
 feh
 firefox
 flameshot
+gimp
 git
 glow
 gnome-themes-extra
 gnu-free-fonts
 go
+godot
 grub
 gtk4
 gvfs
@@ -153,3 +156,4 @@ xorg-xwininfo
 xorg-xwud
 xsel
 yarn
+zip
