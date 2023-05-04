@@ -54,6 +54,7 @@ nftables
 nmap
 nodejs
 noto-fonts
+ntp
 nvidia
 nvidia-prime
 nvidia-settings
@@ -93,7 +94,7 @@ ttf-dejavu
 ttf-font-awesome
 ttf-ionicons
 ttf-liberation
-ttf-nerd-fonts-symbols-2048-em-mono
+ttf-nerd-fonts-symbols-mono
 ttf-roboto
 ttf-ubuntu-font-family
 turbostat
