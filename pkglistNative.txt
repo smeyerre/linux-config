@@ -72,8 +72,10 @@ pulseaudio-equalizer
 pulseaudio-jack
 pulseaudio-lirc
 pulseaudio-zeroconf
+python-beautifulsoup4
 python-pip
 python-pynvim
+python-requests
 radeontop
 rclone
 reflector
