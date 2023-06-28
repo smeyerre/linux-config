@@ -17,6 +17,8 @@ cronie
 deluge
 deluge-gtk
 discord
+docker
+docker-compose
 dunst
 efibootmgr
 feh
@@ -87,6 +89,7 @@ sudo
 supergfxctl
 syncthing
 sysstat
+tensorflow
 terminus-font
 the_silver_searcher
 thunar
