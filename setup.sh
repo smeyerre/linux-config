@@ -33,20 +33,33 @@ echo
 
 # Install backed up community and Aur packages
 # ===========================================
-#TODO: Remove drivers not needed on new system from lists
-echo "Installing community and Aur packages from pkglist*.txt"
-echo "Press [Enter] to continue if you've made sure there aren't any drivers not needed on the new system on the lists..."
-while true; do
-  read -s -n 1 input
-  if [[ $input = '' ]]; then break; fi
-done
+# TODO: Remove drivers not needed on new system from lists
 
-pacman -S --needed - < pkglistNative.txt
-pacman -S --needed - < pkglistAur.txt
+echo "Optionally installing community and Aur packages from pkglist*.txt"
+echo "Would you like to..."
+echo " => Install packages for a laptop"
+echo " => Install packages for a desktop"
+echo " => Skip installing packages"
+select yn in "Laptop" "Desktop" "Skip"; do
+  case $yn in
+    Laptop )
+      pacman -S --needed - < pkglistNative.txt
+      pacman -S --needed - < pkglistAur.txt
+      break;;
+    Desktop )
+      pacman -S --needed - < pkglistNativeDesktop.txt
+      pacman -S --needed - < pkglistAurDesktop.txt
+      break;;
+    Skip )
+      echo "Skipping.";
+      break;;
+  esac
+done
 
 echo "Packages done installing."
 echo "=================================="
 echo
+
 # ===========================================
 
 
