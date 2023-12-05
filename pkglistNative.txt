@@ -1,6 +1,7 @@
 acpi
-asp
+arandr
 asusctl
+autorandr
 aws-cli-v2
 base
 base-devel
@@ -24,6 +25,7 @@ efibootmgr
 feh
 firefox
 flameshot
+geckodriver
 gimp
 git
 glow
@@ -41,6 +43,7 @@ i3blocks
 inetutils
 iw
 jre-openjdk
+jupyter-notebook
 kitty
 libva-mesa-driver
 libva-utils
@@ -56,6 +59,7 @@ nftables
 nmap
 nodejs
 noto-fonts
+npm
 ntp
 nvidia
 nvidia-prime
@@ -93,11 +97,11 @@ tensorflow
 terminus-font
 the_silver_searcher
 thunar
+timeshift
 tldr
 tree
 ttf-dejavu
 ttf-font-awesome
-ttf-ionicons
 ttf-liberation
 ttf-nerd-fonts-symbols-mono
 ttf-roboto
