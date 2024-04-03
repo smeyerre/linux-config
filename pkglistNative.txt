@@ -12,7 +12,6 @@ bluez-utils
 brightnessctl
 chromium
 clang
-code
 cpupower
 cronie
 deluge

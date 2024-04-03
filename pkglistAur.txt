@@ -12,4 +12,5 @@ smem
 thesauromatic-git
 timeshift-autosnap
 ttf-ionicons
+visual-studio-code-bin
 yay
