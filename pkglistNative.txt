@@ -2,7 +2,6 @@ acpi
 arandr
 asusctl
 autorandr
-aws-cli-v2
 base
 base-devel
 bash-completion
@@ -56,7 +55,6 @@ network-manager-applet
 networkmanager
 nftables
 nmap
-nodejs
 noto-fonts
 npm
 ntp
