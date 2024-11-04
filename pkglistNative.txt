@@ -108,6 +108,7 @@ unzip
 vdpauinfo
 vlc
 w3m
+wget
 wireshark-cli
 xclip
 xdg-user-dirs

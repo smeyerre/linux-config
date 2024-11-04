@@ -1,5 +1,6 @@
 1password
 asp
+asusctltray-git
 aws-cli-v2
 betterlockscreen
 brave-bin
