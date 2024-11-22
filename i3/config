@@ -77,11 +77,11 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# move focused workspace between monitors
+bindsym $mod+Shift+Left move workspace to output left
+bindsym $mod+Shift+Down move workspace to output down
+bindsym $mod+Shift+Up move workspace to output up
+bindsym $mod+Shift+Right move workspace to output right
 
 # split in horizontal orientation
 bindsym $mod+s split h
@@ -176,18 +176,22 @@ mode "resize" {
 }
 
 # Pulse Audio controls
-# run pactl list sinks
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume#
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send --expire-time=1000 " $(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')" -h string:x-canonical-private-synchronous:volume #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send --expire-time=1000 " $(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')" -h string:x-canonical-private-synchronous:volume #decrease sound volume
+# TODO: Use only active pactl sink for when using bluetooth
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && \
+  pactl list sinks | grep Volume | head -n1 | awk '{print $5}' | \
+  xargs -I '{}' notify-send --expire-time=1000 " {}" -h int:value:{} -h string:x-canonical-private-synchronous:volume #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && \
+  pactl list sinks | grep Volume | head -n1 | awk '{print $5}' | \
+  xargs -I '{}' notify-send --expire-time=1000 " {}" -h int:value:{} -h string:x-canonical-private-synchronous:volume #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send --expire-time=1000 "$(pactl list sinks | grep Mute | head -n1 | awk '{print ($2 == "yes") ? " muted" : " unmuted"}')" -h string:x-canonical-private-synchronous:volume # mute sound
 
 # Screen brightness controls
-# enable passwordless sudo for ybacklight. echo "koromicha ALL=NOPASSWD: /usr/bin/ybacklight" > /etc/sudoers.d/ybacklight
-bindsym XF86MonBrightnessUp exec brightnessctl set +4% && notify-send --expire-time=1000 " $(brightnessctl | grep -oP '\d*%')" -h string:x-canonical-private-synchronous:brightness # increase screen brightness
-bindsym XF86MonBrightnessDown exec brightnessctl set 4%- && notify-send --expire-time=1000 " $(brightnessctl | grep -oP '\d*%')" -h string:x-canonical-private-synchronous:brightness # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +4% && \
+  brightnessctl | grep -oP '\d*(?=%)' | \
+  xargs -I '{}' notify-send --expire-time=1000 " {}%" -h int:value:{} -h string:x-canonical-private-synchronous:brightness # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 4%- && \
+  brightnessctl | grep -oP '\d*(?=%)' | \
+  xargs -I '{}' notify-send --expire-time=1000 " {}%" -h int:value:{} -h string:x-canonical-private-synchronous:brightness # decrease screen brightness
 
 # i3blocks
 bar {
@@ -233,6 +237,8 @@ exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id blueman-applet &
 exec_always --no-startup-id betterlockscreen --update ~/Pictures/wallpaper.jpg &
 exec_always --no-startup-id betterlockscreen --wall &
+exec --no-startup-id /usr/local/bin/asusctltray &
+exec --no-startup-id /usr/bin/flameshot &
 # exec --no-startup-id rclone mount --vfs-cache-mode full googleDrive: ~/googleDriveRemote/ &
 # exec_always --no-startup-id systemctl start syncthing@sam.service # may need to uncomment to start on startup
 
@@ -300,6 +306,13 @@ for_window [window_role="File Operation Progress"] floating enable sticky
 for_window [class="qBittorrent" window_role="pop-up"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
+
+# For Godot Engine. Makes the run scene window open floating
+for_window [instance="Godot_Engine"] floating enable
+for_window [title=".*Godot Engine*."] floating disable
+
+# For FromScratch. Makes the window open floating
+for_window [class="FromScratch"] floating enable
 
 # Sticky window
 for_window [instance="file_progress"]  sticky enable
