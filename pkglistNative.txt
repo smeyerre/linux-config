@@ -43,12 +43,15 @@ iw
 jre-openjdk
 jupyter-notebook
 kitty
-libva-mesa-driver
+libreoffice-fresh
 libva-utils
 linux
 linux-firmware
 logrotate
+lua51
+luarocks
 man-db
+ncdu
 neofetch
 neovim
 network-manager-applet
@@ -67,7 +70,7 @@ otf-latin-modern
 pacman-contrib
 papirus-icon-theme
 picom
-powertop
+postgresql
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -79,8 +82,10 @@ python-beautifulsoup4
 python-pip
 python-pynvim
 python-requests
+python-virtualenvwrapper
 radeontop
 rclone
+redshift
 reflector
 rofi
 rog-control-center
@@ -96,6 +101,7 @@ the_silver_searcher
 thunar
 timeshift
 tldr
+tmux
 tree
 ttf-dejavu
 ttf-font-awesome

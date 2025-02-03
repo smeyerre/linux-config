@@ -6,10 +6,12 @@ betterlockscreen
 brave-bin
 fromscratch-bin
 jupyterthemes
+kanata-bin
 mictray
 mullvad-vpn
 nvim-packer-git
 ps_mem
+python311
 smem
 thesauromatic-git
 timeshift-autosnap
