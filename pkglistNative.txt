@@ -171,3 +171,4 @@ xorg-xwud
 xsel
 yarn
 zip
+zoxide
