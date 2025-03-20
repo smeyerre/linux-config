@@ -4,6 +4,7 @@ asusctltray-git
 aws-cli-v2
 betterlockscreen
 brave-bin
+changie
 fromscratch-bin
 jupyterthemes
 kanata-bin

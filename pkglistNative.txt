@@ -23,6 +23,7 @@ efibootmgr
 feh
 firefox
 flameshot
+fzf
 geckodriver
 gimp
 git
@@ -89,6 +90,7 @@ redshift
 reflector
 rofi
 rog-control-center
+sbt
 sdcv
 steam
 sudo
