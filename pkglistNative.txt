@@ -128,6 +128,7 @@ vdpauinfo
 vlc
 w3m
 waybar
+wev
 wget
 wireplumber
 wireshark-cli
