@@ -39,6 +39,7 @@ gtk4
 gvfs
 gvim
 hugo
+hypridle
 hyprland
 hyprlock
 hyprpaper
@@ -105,6 +106,7 @@ sdcv
 steam
 sudo
 supergfxctl
+swaync
 syncthing
 sysstat
 tensorflow
