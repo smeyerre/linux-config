@@ -6,6 +6,7 @@ betterlockscreen
 brave-bin
 changie
 fromscratch-bin
+hyprshot
 hyprsysteminfo
 jupyterthemes
 kanata-bin
