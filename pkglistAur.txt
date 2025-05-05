@@ -6,6 +6,7 @@ betterlockscreen
 brave-bin
 changie
 fromscratch-bin
+hyprsysteminfo
 jupyterthemes
 kanata-bin
 mictray
@@ -18,4 +19,5 @@ thesauromatic-git
 timeshift-autosnap
 ttf-ionicons
 visual-studio-code-bin
+walker-bin
 yay
