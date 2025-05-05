@@ -276,7 +276,7 @@ icon = "system-log-out"
 label = "Logout Hyprland"
 
 [[plugins.entries]]
-exec = "systemctl suspend"
+exec = "hyprlock & sleep 0.5; systemctl suspend"
 icon = "system-suspend"
 label = "Suspend"
 
