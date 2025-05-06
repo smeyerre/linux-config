@@ -111,10 +111,10 @@ echo " => Skip Vim setup"
 select yn in "NeoVim" "Vim" "Skip"; do
   case $yn in
     NeoVim )
-      "$HERE"/vim/neoVimSetup.sh;
+      "$HERE"/neoVimSetup.sh;
       break;;
     Vim )
-      "$HERE"/vim/vimSetup.sh;
+      "$HERE"/vimSetup.sh;
       break;;
     Skip )
       echo "Skipping vim setup.";

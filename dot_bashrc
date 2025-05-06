@@ -49,7 +49,7 @@ export PATH=$PATH:/home/sam/.local/bin/
 # fixrazermousespeed
 
 # custom bash prompt
-source ~/bash_prompt
+source ~/.bash_prompt
 
 # set vim as default editor
 export VISUAL=nvim

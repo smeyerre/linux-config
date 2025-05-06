@@ -5,7 +5,7 @@
 #
 # i3blocks blocklet script to see the available updates of pacman and the AUR
 import subprocess
-from subprocess import check_output
+from subprocess import check_output, run
 import argparse
 import os
 import re
@@ -107,7 +107,15 @@ def get_aur_yaourt_updates():
     return aur_updates
 
 def get_aur_yay_updates():
-    output = check_output(['yay', '-Qua']).decode('utf-8')
+    output = ''
+    try:
+        # output = check_output(['yay', '-Qua']).decode('utf-8')
+        output = run(['yay', '-Qua'], check=True, capture_output=True, text=True).stdout
+    except subprocess.CalledProcessError as exc:
+        # yay exits with 1 and no output if no updates are available.
+        # we ignore this case and go on
+        if not (exc.returncode == 1 and not exc.output):
+            raise exc
     if not output:
         return []
 
@@ -125,11 +133,10 @@ def matching_updates(updates, watch_list):
 
     return matches
 
-
+# def main():
 label = os.environ.get("LABEL","")
 message = "<span color='{1}'>{0}{2}</span>"
 args = create_argparse()
-
 updates = get_updates()
 if args.aur:
     updates += get_aur_yaourt_updates()
@@ -153,3 +160,8 @@ if update_count > 0:
     print(message.format(label, args.updates_available_color, short_info))
 elif not args.quiet:
     print(message.format(label, args.base_color, 'system up to date'))
+
+# if os.environ.get('BLOCK_BUTTON') == "1":
+#     main()
+
+# main()
