@@ -36,22 +36,46 @@ fi
 
 PS1='[\u@\h \W]\$ '
 
-# add ~/bin/ to PATH
-export PATH=$PATH:~/bin/
+# disable system bell
+bind 'set bell-style none'
 
-# add ~/.local/bin to path
-export PATH=$PATH:~/.local/bin/
+# add /home/sam/bin/ to PATH
+export PATH=$PATH:/home/sam/bin/
+
+# add /home/sam/.local/bin to path
+export PATH=$PATH:/home/sam/.local/bin/
 
 # source scripts from ~/bin/
 source ~/bin/bashFunctions.sh
 
 # adjust mouse speed
-fixRazerMouseSpeed
+# fixrazermousespeed
 
 # custom bash prompt
 source ~/bash_prompt
 
-# execute ~/.xinitrc on login
-if [ -z "${DISPLAY}"  ] && [ "${XDG_VTNR}" -eq 1  ]; then
-    exec startx
-fi
+# set vim as default editor
+export VISUAL=nvim
+export EDITOR=nvim
+
+# add texlive to path
+export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
+export MANPATH="/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH"
+
+# virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper_lazy.sh
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# Setup zoxide (NOTE: MUST BE AT END)
+eval "$(zoxide init --cmd cd bash)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"
