@@ -45,9 +45,6 @@ export PATH=$PATH:/home/sam/bin/
 # add /home/sam/.local/bin to path
 export PATH=$PATH:/home/sam/.local/bin/
 
-# source scripts from ~/bin/
-source ~/bin/bashFunctions.sh
-
 # adjust mouse speed
 # fixrazermousespeed
 
