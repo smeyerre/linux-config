@@ -9,6 +9,7 @@ bind
 blueman
 bluez-utils
 brightnessctl
+chezmoi
 chromium
 clang
 cpupower
