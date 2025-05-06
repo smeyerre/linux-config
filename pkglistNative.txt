@@ -32,8 +32,6 @@ gnome-themes-extra
 gnu-free-fonts
 go
 godot
-greetd
-greetd-regreet
 grub
 gtk4
 gvfs
