@@ -33,4 +33,5 @@ Automatically configures:
 # TODO
  - Only install packages needed at each step
  - Setup remaining config files eg. `~/.config/`, `/etc/`, `/usr/`, ...
- - Maybe migrate to Wayland
+ - Finish migration to Wayland
+ - Update README instructions for Chezmoi
