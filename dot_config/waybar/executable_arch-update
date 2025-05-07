@@ -57,7 +57,7 @@ def create_argparse():
         '-w',
         '--watch',
         nargs='*',
-        default = _default('WATCH', arg_type=strlist),
+        default = _default('WATCH', '^linux.* ^pacman.*', arg_type=strlist),
         help='Explicitly watch for specified packages. '
         'Listed elements are treated as regular expressions for matching.'
     )

@@ -57,7 +57,8 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%  ",
+ 
         "tooltip": false,
         "on-click": "kitty -e htop"
     },
@@ -67,7 +68,7 @@
     },
     "disk": {
         "interval": 30,
-        "format": "{free}",
+        "format": "{free}  ",
         "path": "/home"
     },
     "backlight": {
@@ -112,9 +113,9 @@
         "on-click": "pavucontrol"
     },
     "custom/pacman": {
-        "format": "{} ",
+        "format": "{}  ",
         "interval": 3600,
-        "exec": "~/.config/waybar/arch-update -y -u '#F1FA8C'",
+        "exec": "~/.config/waybar/arch-update -y -u '#F1FA8C' -w '^linux.* ^pacman.*'",
         "return-type": "json",
         // "on-click": "kitty -e 'yay -Syu'",
         "signal": 8
