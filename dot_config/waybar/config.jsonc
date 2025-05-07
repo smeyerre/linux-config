@@ -9,7 +9,8 @@
         "memory",
         "cpu",
         "disk",
-        "temperature"
+        "temperature",
+        "custom/pacman"
         // "sway/scratchpad"
     ],
     "modules-center": [
@@ -17,7 +18,6 @@
     ],
     "modules-right": [
         // "custom/vpn",
-        "custom/pacman",
         "network",
         "backlight",
         "pulseaudio",
@@ -52,7 +52,7 @@
         "spacing": 14
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%A}</big>\n<tt><small>{calendar}</small></tt>",
         // "format": "{:%a %d-%m-%Y <big>%R</big>}",
         "format": " {:%H:%M   %d/%m/%Y}",
         "format-alt": "{:%Y-%m-%d}"
