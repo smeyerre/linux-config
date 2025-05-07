@@ -28,15 +28,14 @@
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
-        // "format": "{name}: {icon}",
-        // "format-icons": {
-        //     "urgent": "",
-        //     "active": "",
-        //     "default": ""
-        // },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        },
         "show-special": true
     },
     "hyprland/submap": {

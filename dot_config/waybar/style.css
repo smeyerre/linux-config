@@ -43,8 +43,11 @@ window#waybar.hidden {
 }
 
 #workspaces button.persistent {
-    color: #7c818c;
-    font-size: 12px;
+    transition: none;
+    padding: 5px;
+    color: #F8F8F2;
+    background: transparent;
+    font-size: 18px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -90,35 +93,24 @@ window#waybar.hidden {
 /*     background-color: #FF5555; */
 /*     border-bottom: 3px solid #F8F8F2; */
 /* } */
-#power-profiles-daemon {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background-color: #FF5555;
-}
 
-/* #clock, */
-/* #battery, */
-/* #cpu, */
-/* #memory, */
-/* #disk, */
-/* #temperature, */
-/* #backlight, */
-/* #network, */
-/* #pulseaudio, */
-/* #custom-media, */
-/* #tray, */
-/* #mode, */
-/* #idle_inhibitor, */
-/* #mpd, */
-/* #custom-pacman, */
-/* #custom-vpn { */
-/*     padding: 0 10px; */
-/*     margin: 0 4px; */
-/*     color: #F8F8F2; */
-/* } */
+#memory,
+#cpu,
+#disk,
+#temperature,
+#custom-pacman,
+#network,
+#backlight,
+#pulseaudio,
+#power-profiles-daemon,
+#battery,
+#clock,
+#tray {
+    margin-right: 2px;
+    /* padding: 0 10px; */
+    /* margin: 0 4px; */
+    /* color: #F8F8F2; */
+}
 /**/
 /* #window, */
 /* #workspaces { */
@@ -136,7 +128,6 @@ window#waybar.hidden {
 /* } */
 
 #battery {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -191,7 +182,6 @@ window#waybar.hidden {
 /* } */
 
 #memory {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -217,7 +207,6 @@ window#waybar.hidden {
 /* } */
 
 #cpu {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -239,7 +228,6 @@ window#waybar.hidden {
 /* } */
 
 #disk {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -253,7 +241,6 @@ window#waybar.hidden {
 }
 
 #temperature {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -267,7 +254,6 @@ window#waybar.hidden {
 }
 
 #network {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -280,7 +266,6 @@ window#waybar.hidden {
 /*     color: #F8F8F2; */
 /* } */
 #backlight {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -290,7 +275,6 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -313,6 +297,16 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
+#power-profiles-daemon {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    /* background-color: #FF5555; */
+    background: #383c4a;
+}
+
 #tray {
     padding-left: 16px;
     padding-right: 16px;
@@ -324,7 +318,7 @@ window#waybar.hidden {
 
 #custom-pacman {
     padding-left: 16px;
-    padding-right: 8px;
+    padding-right: 16px;  /* Change from 8px to 16px */
     /* border-radius: 10px 0px 0px 10px; */
     border-radius: 10px;
     transition: none;
