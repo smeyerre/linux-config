@@ -1,99 +1,163 @@
-/* Dracula theme for waybar */
-
 * {
+    border: none;
+    border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Hack, FontAwesome, sans-serif;
     font-size: 14px;
 }
 
 window#waybar {
-    background-color: #282A36;
-    color: #F8F8F2;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background: transparent;
+    /* background-color: #282A36; */
+    /* color: #F8F8F2; */
+    /* transition-property: background-color; */
+    /* transition-duration: .5s; */
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: #282A36;
+}
+
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
+    transition: none;
+    padding: 5px;
     color: #F8F8F2;
+    background: transparent;
+    font-size: 18px;
+
+    /* padding: 0 5px; */
+    /* background-color: transparent; */
+    /* color: #F8F8F2; */
     /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
+    /* box-shadow: inset 0 -3px transparent; */
     /* Avoid rounded borders under each workspace name */
-    border: none;
-    border-radius: 0;
+    /* border: none; */
+    /* border-radius: 0; */
+}
+
+#workspaces button.persistent {
+    color: #7c818c;
+    font-size: 12px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: #383c4a;
     background: #44475A;
-    box-shadow: inset 0 -3px #F8F8F2;
 }
 
+#workspaces button.focused {
+    color: white;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+/* #workspaces button:hover { */
+/*     background: #44475A; */
+/*     box-shadow: inset 0 -3px #F8F8F2; */
+/* } */
+/**/
 #workspaces button.active {
     background-color: #44475A;
     box-shadow: inset 0 -3px #F8F8F2;
 }
+/**/
+/* #workspaces button.urgent { */
+/*     background-color: #FF5555; */
+/* } */
 
-#workspaces button.urgent {
+#window {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+/* #mode { */
+/*     background-color: #FF5555; */
+/*     border-bottom: 3px solid #F8F8F2; */
+/* } */
+#power-profiles-daemon {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
     background-color: #FF5555;
 }
 
-#mode {
-    background-color: #FF5555;
-    border-bottom: 3px solid #F8F8F2;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd,
-#custom-pacman,
-#custom-vpn {
-    padding: 0 10px;
-    margin: 0 4px;
-    color: #F8F8F2;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
-}
+/* #clock, */
+/* #battery, */
+/* #cpu, */
+/* #memory, */
+/* #disk, */
+/* #temperature, */
+/* #backlight, */
+/* #network, */
+/* #pulseaudio, */
+/* #custom-media, */
+/* #tray, */
+/* #mode, */
+/* #idle_inhibitor, */
+/* #mpd, */
+/* #custom-pacman, */
+/* #custom-vpn { */
+/*     padding: 0 10px; */
+/*     margin: 0 4px; */
+/*     color: #F8F8F2; */
+/* } */
+/**/
+/* #window, */
+/* #workspaces { */
+/*     margin: 0 4px; */
+/* } */
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
+/* .modules-left > widget:first-child > #workspaces { */
+/*     margin-left: 0; */
+/* } */
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+/* .modules-right > widget:last-child > #workspaces { */
+/*     margin-right: 0; */
+/* } */
+
+#battery {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
 }
 
-#battery.charging, #battery.full {
-    color: #7EA3A3;
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
 }
 
 #battery.warning:not(.charging) {
-    color: #AF9F87;
+    background-color: #ffbe61;
+    color: black;
 }
 
 #battery.critical:not(.charging) {
-    color: #CC6666;
+    background-color: #f53c3c;
+    color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -101,36 +165,169 @@ window#waybar.hidden {
     animation-direction: alternate;
 }
 
-#cpu.warning {
-    color: #FFFC00;
-}
+/* #battery.charging, #battery.full { */
+/*     color: #7EA3A3; */
+/* } */
+/**/
+/* #battery.warning:not(.charging) { */
+/*     color: #AF9F87; */
+/* } */
+/**/
+/* #battery.critical:not(.charging) { */
+/*     color: #CC6666; */
+/*     animation-name: blink; */
+/*     animation-duration: 0.5s; */
+/*     animation-timing-function: linear; */
+/*     animation-iteration-count: infinite; */
+/*     animation-direction: alternate; */
+/* } */
 
-#cpu.critical {
-    color: #FF0000;
+/* #memory.warning { */
+/*     color: #FFAE00; */
+/* } */
+/**/
+/* #memory.critical { */
+/*     color: #FF0000; */
+/* } */
+
+#memory {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
 }
 
 #memory.warning {
-    color: #FFAE00;
+    background-color: #eb4d4b;
 }
 
 #memory.critical {
-    color: #FF0000;
+    background-color: #FF0000;
+}
+
+/* #cpu.warning { */
+/*     color: #FFFC00; */
+/* } */
+/**/
+/* #cpu.critical { */
+/*     color: #FF0000; */
+/* } */
+
+#cpu {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#cpu.warning {
+    background-color: #eb4d4b;
+}
+
+#cpu.critical {
+    background-color: #FF0000;
+}
+
+/* #disk.warning { */
+/*     color: #FF0000; */
+/* } */
+
+#disk {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
 }
 
 #disk.warning {
-    color: #FF0000;
+    background-color: #eb4d4b;
 }
 
+#temperature {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#network {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+/* #backlight { */
+/*     color: #F8F8F2; */
+/* } */
 #backlight {
-    color: #F8F8F2;
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#pulseaudio {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
 }
 
 #network.disconnected {
     color: #FF5555;
 }
 
+#clock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
 #custom-pacman {
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
     color: #F1FA8C;
+    background: #383c4a;
 }
 
 #custom-vpn {
