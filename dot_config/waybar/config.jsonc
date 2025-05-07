@@ -115,7 +115,7 @@
     "custom/pacman": {
         "format": "{}  ",
         "interval": 3600,
-        "exec": "~/.config/waybar/arch-update -y -u '#F1FA8C' -w '^linux.* ^pacman.*'",
+        "exec": "~/.config/waybar/arch-update -y -u '#F1FA8C'",
         "return-type": "json",
         // "on-click": "kitty -e 'yay -Syu'",
         "signal": 8
