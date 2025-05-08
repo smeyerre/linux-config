@@ -118,6 +118,7 @@ tmux
 tree
 ttf-dejavu
 ttf-font-awesome
+ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-nerd-fonts-symbols-mono
 ttf-roboto
