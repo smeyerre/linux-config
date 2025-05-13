@@ -75,6 +75,7 @@ ntp
 nvidia-open-dkms
 nvidia-prime
 nvidia-settings
+nwg-look
 obsidian
 os-prober
 otf-latin-modern
