@@ -81,6 +81,7 @@ os-prober
 otf-latin-modern
 pacman-contrib
 papirus-icon-theme
+pavucontrol
 picom
 postgresql
 pulseaudio
