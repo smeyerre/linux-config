@@ -63,7 +63,6 @@ lua51
 luarocks
 man-db
 ncdu
-neofetch
 neovim
 network-manager-applet
 networkmanager

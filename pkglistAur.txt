@@ -12,6 +12,7 @@ jupyterthemes
 kanata-bin
 mictray
 mullvad-vpn
+neofetch
 nvim-packer-git
 ps_mem
 python311
