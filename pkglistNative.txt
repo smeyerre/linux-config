@@ -79,6 +79,7 @@ obsidian
 os-prober
 otf-latin-modern
 pacman-contrib
+pandoc-cli
 papirus-icon-theme
 pavucontrol
 picom
