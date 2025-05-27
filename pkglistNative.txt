@@ -129,6 +129,7 @@ turbostat
 unzip
 uwsm
 vdpauinfo
+visidata
 vlc
 w3m
 waybar
