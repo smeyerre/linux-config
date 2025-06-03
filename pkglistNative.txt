@@ -25,6 +25,7 @@ efibootmgr
 fd
 feh
 firefox
+fish
 flameshot
 fzf
 geckodriver

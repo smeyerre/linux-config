@@ -5,6 +5,7 @@ aws-cli-v2
 betterlockscreen
 brave-bin
 changie
+evil-helix-bin
 fromscratch-bin
 hyprshot
 hyprsysteminfo
