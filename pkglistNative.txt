@@ -109,6 +109,7 @@ rofi
 rog-control-center
 sbt
 sdcv
+starship
 steam
 sudo
 supergfxctl
