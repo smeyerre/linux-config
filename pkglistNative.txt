@@ -21,6 +21,7 @@ docker
 docker-compose
 dunst
 efibootmgr
+fd
 feh
 firefox
 flameshot
@@ -119,6 +120,7 @@ thunar
 timeshift
 tldr
 tmux
+tokei
 tree
 ttf-dejavu
 ttf-font-awesome
