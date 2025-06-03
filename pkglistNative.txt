@@ -73,6 +73,7 @@ networkmanager
 nftables
 nmap
 noto-fonts
+noto-fonts-emoji
 npm
 ntp
 nvidia-open-dkms
@@ -126,6 +127,7 @@ tmux
 tokei
 tree
 ttf-dejavu
+ttf-firacode-nerd
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 ttf-liberation
