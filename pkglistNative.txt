@@ -20,6 +20,7 @@ discord
 docker
 docker-compose
 dunst
+dust
 efibootmgr
 fd
 feh
@@ -198,5 +199,6 @@ xorg-xwininfo
 xorg-xwud
 xsel
 yarn
+zellij
 zip
 zoxide
