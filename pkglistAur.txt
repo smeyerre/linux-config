@@ -7,11 +7,9 @@ brave-bin
 changie
 evil-helix-bin
 fromscratch-bin
-hyprshot
 hyprsysteminfo
 jupyterthemes
 kanata-bin
-mictray
 mullvad-vpn
 neofetch
 nvim-packer-git

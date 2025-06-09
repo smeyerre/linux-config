@@ -47,6 +47,7 @@ hyprlock
 hyprpaper
 hyprpicker
 hyprpolkitagent
+hyprshot
 hyprsunset
 i3-wm
 i3blocks
