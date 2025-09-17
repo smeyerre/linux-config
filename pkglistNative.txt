@@ -41,14 +41,6 @@ gtk4
 gvfs
 gvim
 hugo
-hypridle
-hyprland
-hyprlock
-hyprpaper
-hyprpicker
-hyprpolkitagent
-hyprshot
-hyprsunset
 i3-wm
 i3blocks
 inetutils
@@ -115,7 +107,6 @@ starship
 steam
 sudo
 supergfxctl
-swaync
 syncthing
 sysstat
 tensorflow
@@ -137,12 +128,10 @@ ttf-roboto
 ttf-ubuntu-font-family
 turbostat
 unzip
-uwsm
 vdpauinfo
 visidata
 vlc
 w3m
-waybar
 wev
 wget
 wireplumber
@@ -198,7 +187,6 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
-xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud

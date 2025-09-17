@@ -1,4 +1,4 @@
-# linux-config
+# linux-config (X11)
 
 Sets up new computer after an Arch linux installation.
 Look at the [migration guide](https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware) for more information.
@@ -33,5 +33,4 @@ Automatically configures:
 # TODO
  - Only install packages needed at each step
  - Setup remaining config files eg. `~/.config/`, `/etc/`, `/usr/`, ...
- - Finish migration to Wayland
  - Update README instructions for Chezmoi
