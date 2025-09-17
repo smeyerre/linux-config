@@ -34,4 +34,5 @@ Automatically configures:
  - Only install packages needed at each step
  - Setup remaining config files eg. `~/.config/`, `/etc/`, `/usr/`, ...
  - Finish migration to Wayland
+    - Remove x11 packages from package lists
  - Update README instructions for Chezmoi
