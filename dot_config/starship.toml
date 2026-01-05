@@ -8,7 +8,6 @@ ssh_only = false
 disabled = true
 
 [aws]
-disabled = true
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [bun]
