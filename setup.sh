@@ -101,31 +101,31 @@ echo
 # ===========================================
 
 
-# Setup vim
-# ===========================================
-echo "Optional Vim setup:"
-echo "Would you like to configure..."
-echo " => NeoVim dotfiles and packages from git@github.com:smeyerre/vim-config.git (Recommended)"
-echo " => Old Vim dotfiles from github.com:Samwisemr/vimrc.git"
-echo " => Skip Vim setup"
-select yn in "NeoVim" "Vim" "Skip"; do
-  case $yn in
-    NeoVim )
-      "$HERE"/neoVimSetup.sh;
-      break;;
-    Vim )
-      "$HERE"/vimSetup.sh;
-      break;;
-    Skip )
-      echo "Skipping vim setup.";
-      break;;
-  esac
-done
-
-echo "=================================="
-echo
-
-# ===========================================
+# # Setup vim
+# # ===========================================
+# echo "Optional Vim setup:"
+# echo "Would you like to configure..."
+# echo " => NeoVim dotfiles and packages from git@github.com:smeyerre/vim-config.git (Recommended)"
+# echo " => Old Vim dotfiles from github.com:Samwisemr/vimrc.git"
+# echo " => Skip Vim setup"
+# select yn in "NeoVim" "Vim" "Skip"; do
+#   case $yn in
+#     NeoVim )
+#       "$HERE"/neoVimSetup.sh;
+#       break;;
+#     Vim )
+#       "$HERE"/vimSetup.sh;
+#       break;;
+#     Skip )
+#       echo "Skipping vim setup.";
+#       break;;
+#   esac
+# done
+#
+# echo "=================================="
+# echo
+#
+# # ===========================================
 
 
 echo "All set up!"
