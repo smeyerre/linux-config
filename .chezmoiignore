@@ -22,3 +22,8 @@ vimSetup.sh
 Pictures
 bin
 {{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+.zshrc
+.config/amethyst
+{{ end }}
