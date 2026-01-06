@@ -1,0 +1,34 @@
+name = "power"
+name_pretty = "Power Menu"
+icon = "system-shutdown"
+
+[[entries]]
+text = "Lock Screen"
+action = "hyprlock"
+icon = "system-lock-screen"
+
+[[entries]]
+text = "Logout Hyprland"
+icon = "system-log-out"
+action = "uwsm stop"
+
+[[entries]]
+text = "Suspend"
+icon = "system-suspend"
+action = "hyprlock & sleep 0.5; systemctl suspend"
+
+[[entries]]
+text = "Reboot"
+icon = "system-reboot"
+action = "systemctl reboot"
+
+[[entries]]
+text = "Power Off"
+icon = "system-shutdown"
+action = "systemctl poweroff"
+
+[[entries]]
+text = "Kill User Session"
+icon = "application-exit"
+action = "loginctl kill-user $USER"
+
