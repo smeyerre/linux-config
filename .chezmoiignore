@@ -1,13 +1,11 @@
 LICENSE
 README.md
 asus.sh
-neoVimSetup.sh
 pkglistAur.txt
 pkglistAurDesktop.txt
 pkglistNative.txt
 pkglistNativeDesktop.txt
 setup.sh
-vimSetup.sh
 
 {{ if ne .chezmoi.os "linux" }}
 .bash_aliases

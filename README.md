@@ -1,4 +1,4 @@
-# linux-config
+# dotfiles
 
 Sets up new computer after an Arch linux installation.
 Look at the [migration guide](https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware) for more information.
