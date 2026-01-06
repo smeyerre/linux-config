@@ -20,3 +20,4 @@ alias gch='git checkout'
 alias gb='git branch'
 alias gd='git diff'
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
+alias get_idf='. $HOME/esp/esp-idf/export.sh'

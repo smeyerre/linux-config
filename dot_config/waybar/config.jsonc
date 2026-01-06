@@ -118,7 +118,7 @@
         "interval": 3600,
         "exec": "~/.config/waybar/arch-update -y -u '#F1FA8C'",
         "return-type": "json",
-        // "on-click": "kitty -e 'yay -Syu'",
+        "on-click": "pkill -RTMIN+8 waybar",
         "signal": 8
     },
     "custom/vpn": {

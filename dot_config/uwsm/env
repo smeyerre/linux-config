@@ -9,5 +9,5 @@ export NVD_BACKEND=direct
 # Multi-monitor stuttering/slow (NOTE: might cause bugs)
 # export AQ_FORCE_LINEAR_BLIT=1
 
-# Hopefully fix flickering in Electron/CEF apps (NOTE: only works in v0.50+)
+# Hopefully fix flickering in Electron/CEF apps (NOTE: Messes with Obsidian)
 # export ELECTRON_OZONE_PLATFORM_HINT=auto

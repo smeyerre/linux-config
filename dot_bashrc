@@ -49,7 +49,7 @@ export PATH=$PATH:/home/sam/.local/bin/
 # fixrazermousespeed
 
 # custom bash prompt
-source ~/.bash_prompt
+##source ~/.bash_prompt
 
 # set vim as default editor
 export VISUAL=nvim
@@ -66,6 +66,9 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+
+# Start starship prompt
+eval "$(starship init bash)"
 
 # Setup zoxide (NOTE: MUST BE AT END)
 eval "$(zoxide init --cmd cd bash)"
