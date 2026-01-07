@@ -1,0 +1,15 @@
+[user]
+  name = {{ .gitName | quote }}
+  email = {{ .gitEmail | quote }}
+  signingkey = {{ .gitSigningkey | quote }}
+[core]
+  editor = nvim
+[init]
+  defaultBranch = main
+[merge]
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
